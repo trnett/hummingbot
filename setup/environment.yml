@@ -72,3 +72,7 @@ dependencies:
     - aptos-sdk>=0.8.0
     - solders>=0.19.0
     - lighter-sdk==1.1.2
+    # generic ccxt connector adapter. Do not bump blindly: 4.5.32 is a release without the dydx protobuf files that
+    # clash with pyinjective (duplicate gogoproto/gogo.proto) as soon as both are imported in the same process.
+    # 4.5.33 and later ship them.
+    - ccxt==4.5.32
